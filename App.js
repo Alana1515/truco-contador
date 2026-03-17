@@ -28,9 +28,18 @@ export default function App() {
           <View style={styles.linhaBotoes}>
             <View style={styles.botaoGrande}>
               <Button
-                onPress={() => setContadorNos(contadorNos + 1)}
                 title="+"
                 color="green"
+                onPress={() => {
+                  const novoPonto = contadorNos + 1;
+                  if (novoPonto >= 13) {
+                    setVitoriasNos(vitoriasNos + 1);
+                    setContadorNos(0);
+                    setContadorEles(0);
+                  } else {
+                    setContadorNos(novoPonto);
+                  }
+                }}
               />
             </View>
 
@@ -44,35 +53,72 @@ export default function App() {
           </View>
 
           {/* BOTÃO TRUCO */}
-          <View style={styles.botaoTruco}>
+          <View style={styles.botaoGrande}>
             <Button
               title="TRUCO"
               color="blue"
-              onPress={() => setContadorNos(contadorNos + 3)}
+              onPress={() => {
+                const novoPonto = contadorNos + 3;
+                if (novoPonto >= 13) {
+                  setVitoriasNos(vitoriasNos + 1);
+                  setContadorNos(0);
+                  setContadorEles(0);
+                } else {
+                  setContadorNos(novoPonto);
+                }
+              }}
             />
           </View>
           {/* BOTÃO SEIS */}
-          <View style={styles.botaoSeis}>
+          <View style={styles.botaoGrande}>
             <Button
               title="SEIS"
               color="pink"
-              onPress={() => setContadorNos(contadorNos + 6)}
+              onPress={() => {
+                const novoPonto = contadorNos + 6;
+                if (novoPonto >= 13) {
+                  setVitoriasNos(vitoriasNos + 1);
+                  setContadorNos(0);
+                  setContadorEles(0);
+                } else {
+                  setContadorNos(novoPonto);
+                }
+              }
+              }
             />
           </View>
           {/* BOTÃO NOVE */}
-          <View style={styles.botaoNove}>
+          <View style={styles.botaoGrande}>
             <Button
               title="NOVE"
               color="yellow"
-              onPress={() => setContadorNos(contadorNos + 9)}
+              onPress={() => {
+                const novoPonto = contadorNos + 9;
+                if (novoPonto >= 13) {
+                  setVitoriasNos(vitoriasNos + 1);
+                  setContadorNos(0);
+                  setContadorEles(0);
+                } else {
+                  setContadorNos(novoPonto);
+                }
+              }}
             />
           </View>
           {/* BOTÃO DOZE */}
-          <View style={styles.botaoDoze}>
+          <View style={styles.botaoGrande}>
             <Button
               title="DOZE"
               color="purple"
-              onPress={() => setContadorNos(contadorNos + 12)}
+              onPress={() => {
+                const novoPonto = contadorNos + 12;
+                if (novoPonto >= 13) {
+                  setVitoriasNos(vitoriasNos + 1);
+                  setContadorNos(0);
+                  setContadorEles(0);
+                } else {
+                  setContadorNos(novoPonto);
+                }
+              }}
             />
           </View>
         </View>
@@ -85,9 +131,18 @@ export default function App() {
           <View style={styles.linhaBotoes}>
             <View style={styles.botaoGrande}>
               <Button
-                onPress={() => setContadorEles(contadorEles + 1)}
                 title="+"
                 color="green"
+                onPress={() => {
+                  const novoPonto = contadorEles + 1;
+                  if (novoPonto >= 13) {
+                    setVitoriasEles(vitoriasEles + 1);
+                    setContadorNos(0);
+                    setContadorEles(0);
+                  } else {
+                    setContadorEles(novoPonto);
+                  }
+                }}
               />
             </View>
 
@@ -101,35 +156,71 @@ export default function App() {
           </View>
 
           {/* BOTÃO TRUCO */}
-          <View style={styles.botaoTruco}>
+          <View style={styles.botaoGrande}>
             <Button
               title="TRUCO"
               color="blue"
-              onPress={() => setContadorEles(contadorEles + 3)}
+              onPress={() => {
+                const novoPonto = contadorEles + 3;
+                if (novoPonto >= 13) {
+                  setVitoriasEles(vitoriasEles + 1);
+                  setContadorNos(0);
+                  setContadorEles(0);
+                } else {
+                  setContadorEles(novoPonto);
+                }
+              }}
             />
           </View>
           {/* BOTÃO SEIS */}
-          <View style={styles.botaoSeis}>
+          <View style={styles.botaoGrande}>
             <Button
               title="SEIS"
               color="pink"
-              onPress={() => setContadorEles(contadorEles + 6)}
+              onPress={() => {
+                const novoPonto = contadorEles + 6;
+                if (novoPonto >= 13) {
+                  setVitoriasEles(vitoriasEles + 1);
+                  setContadorNos(0);
+                  setContadorEles(0);
+                } else {
+                  setContadorEles(novoPonto);
+                }
+              }}
             />
           </View>
           {/* BOTÃO NOVE */}
-          <View style={styles.botaoNove}>
+          <View style={styles.botaoGrande}>
             <Button
               title="NOVE"
               color="yellow"
-              onPress={() => setContadorEles(contadorEles + 9)}
+              onPress={() => {
+                const novoPonto = contadorEles + 9;
+                if (novoPonto >= 13) {
+                  setVitoriasEles(vitoriasEles + 1);
+                  setContadorNos(0);
+                  setContadorEles(0);
+                } else {
+                  setContadorEles(novoPonto);
+                }
+              }}
             />
           </View>
           {/* BOTÃO DOZE */}
-          <View style={styles.botaoDoze}>
+          <View style={styles.botaoGrande}>
             <Button
               title="DOZE"
               color="purple"
-              onPress={() => setContadorEles(contadorEles + 12)}
+              onPress={() => {
+                const novoPonto = contadorEles + 12;
+                if (novoPonto >= 13) {
+                  setVitoriasEles(vitoriasEles + 1);
+                  setContadorNos(0);
+                  setContadorEles(0);
+                } else {
+                  setContadorEles(novoPonto);
+                }
+              }}
             />
           </View>
         </View>
