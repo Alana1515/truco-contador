@@ -5,13 +5,21 @@ import { FlatList, TextInput } from 'react-native-web';
 
 export default function App() {
 
-  const [nome, setNome] = useState(' ');
 
-  const minhaLista = [
-    {id: 1, nome: 'João', cpf: '123.546.789-00' },
-    {id: 2, nome: 'MAria', cpf: '123.546.789-00' },
-    {id: 3, nome: 'Pedro', cpf: '123.546.789-00'  }
-  ]
+  const [nome, setNome] = useState(' ');
+  const [minhaLista, setMinhaLista] = useState([]);
+
+  function adicionarContato() {
+
+    const novoContato = {
+      id: Math.random().toString(),
+      nome: nome
+    }
+    setMinhaLista([novoContato, ...minhaLista]);
+    setNome('')
+
+  }
+
 
   return (
     <View style={styles.container}>
@@ -23,6 +31,12 @@ export default function App() {
         onChangeText={setNome}
       </TextInput>
 
+      <button>
+        title='Adicionar'
+        onPress= {adicionarContato}
+      </button>
+
+
 
       <FlatList>
         data={minhaLista}
@@ -31,9 +45,10 @@ export default function App() {
 
       </FlatList>
 
-        </View>
+    </View>
 
-  )}
+  )
+}
 const styles = StyleSheet.create({
-  
+
 })
